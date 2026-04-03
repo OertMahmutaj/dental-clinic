@@ -1,4 +1,3 @@
-// src/components/sections/Services.tsx
 import { services } from '@/lib/config';
 
 export default function Services() {

@@ -8,8 +8,8 @@ export const clinicInfo: ClinicInfo = {
   email: 'info@adident.al', 
   address: 'Shkolla e Baletit, Rruga Petro Nini Luarasi, Tiranë 1001, Albania',
   coordinates: {
-    lat: 41.3275, 
-    lng: 19.8187,
+    lat: 41.3258039, 
+    lng: 19.8269137,
   },
   hours: {
     weekdays: '8:30 AM - 8:00 PM',

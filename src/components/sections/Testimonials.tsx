@@ -1,4 +1,3 @@
-// src/components/sections/Testimonials.tsx
 'use client';
 
 import { testimonials } from '@/lib/config';
