@@ -1,87 +1,15 @@
-// src/components/sections/Contact.tsx
 import ContactForm from '@/components/ContactForm';
 import { clinicInfo } from '@/lib/config';
-import styled from 'styled-components';
+import {
+  ContactSection,
+  Container,
+  Title,
+  Subtitle,
+  ContentGrid,
+  InfoBox,
+  InfoItem,
+} from '@/styles/Contact.styles';
 
-const ContactSection = styled.section`
-  padding: 5rem 1.5rem;
-  background: #f9fafb;
-`;
-
-const Container = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-`;
-
-const Title = styled.h2`
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #1f2937;
-`;
-
-const Subtitle = styled.p`
-  text-align: center;
-  font-size: 1.25rem;
-  color: #6b7280;
-  margin-bottom: 4rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-`;
-
-const ContentGrid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  margin-top: 3rem;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-`;
-
-const InfoBox = styled.div`
-  h3 {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    color: #1f2937;
-  }
-`;
-
-const InfoItem = styled.div`
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-
-  .icon {
-    font-size: 1.5rem;
-    flex-shrink: 0;
-  }
-
-  .content {
-    strong {
-      display: block;
-      color: #374151;
-      margin-bottom: 0.25rem;
-    }
-
-    span {
-      color: #6b7280;
-    }
-
-    a {
-      color: #3b82f6;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-`;
 
 export default function Contact() {
   return (

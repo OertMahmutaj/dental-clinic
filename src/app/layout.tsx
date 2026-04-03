@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Poppins } from 'next/font/google';
 import StyledComponentsRegistry from '@/lib/registry';
-import ThemeWrapper from '@/components/ThemeWrapper';
+import ThemeWrapper, { Header } from '@/components/ThemeWrapper';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const poppins = Poppins({
@@ -25,7 +25,10 @@ export default function RootLayout({
     <html lang="sq">
       <body className={`${inter.variable} ${poppins.variable}`}>
         <StyledComponentsRegistry>
-          <ThemeWrapper>{children}</ThemeWrapper>
+          <ThemeWrapper>
+            <Header />
+            {children}
+          </ThemeWrapper>
         </StyledComponentsRegistry>
       </body>
     </html>

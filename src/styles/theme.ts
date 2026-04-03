@@ -13,6 +13,8 @@ export const theme = {
     lightGray: '#d1d5db',
     offWhite: '#f9fafb',
     white: '#ffffff',
+    background: '#ffffff',
+    yellow: '#facc15',
   },
   fonts: {
     main: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",

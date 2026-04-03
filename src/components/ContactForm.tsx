@@ -4,103 +4,18 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { contactFormSchema, type ContactFormData } from '@/lib/validations';
-import styled from 'styled-components';
+import {
+  FormContainer,
+  SuccessMessage,
+  FormGroup,
+  Label,
+  Input,
+  ErrorMessage,
+  Textarea,
+  SubmitButton
+} from '@/styles/ContactForm.styles';
 
-const FormContainer = styled.form`
-  max-width: 600px;
-  margin: 0 auto;
-`;
 
-const FormGroup = styled.div`
-  margin-bottom: 1.5rem;
-`;
-
-const Label = styled.label`
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  color: #374151;
-`;
-
-const Input = styled.input`
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border: 2px solid #e5e7eb;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-
-  &:focus {
-    outline: none;
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-  }
-
-  &.error {
-    border-color: #ef4444;
-  }
-`;
-
-const Textarea = styled.textarea`
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border: 2px solid #e5e7eb;
-  border-radius: 8px;
-  font-size: 1rem;
-  min-height: 150px;
-  resize: vertical;
-  font-family: inherit;
-  transition: all 0.3s ease;
-
-  &:focus {
-    outline: none;
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-  }
-
-  &.error {
-    border-color: #ef4444;
-  }
-`;
-
-const ErrorMessage = styled.span`
-  display: block;
-  margin-top: 0.25rem;
-  font-size: 0.875rem;
-  color: #ef4444;
-`;
-
-const SubmitButton = styled.button`
-  width: 100%;
-  padding: 1rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-
-  &:hover:not(:disabled) {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
-  }
-
-  &:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-  }
-`;
-
-const SuccessMessage = styled.div`
-  padding: 1rem;
-  background: #d1fae5;
-  color: #065f46;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  text-align: center;
-`;
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);

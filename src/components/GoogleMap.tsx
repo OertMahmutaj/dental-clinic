@@ -1,9 +1,8 @@
 'use client';
 
-import { useLoadScript, GoogleMap, Marker } from '@react-google-maps/api';
+import { useLoadScript, GoogleMap, Marker, InfoWindow } from '@react-google-maps/api';
 import { clinicInfo } from '@/lib/config';
 import styled from 'styled-components';
-import { InfoWindow } from '@react-google-maps/api';
 
 const MapContainer = styled.div`
   width: 100%;
