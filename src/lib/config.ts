@@ -1,4 +1,3 @@
-// src/lib/config.ts
 import { ClinicInfo, Service, Testimonial } from '@/types';
 
 export const clinicInfo: ClinicInfo = {

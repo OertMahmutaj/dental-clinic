@@ -12,8 +12,8 @@ export async function POST(request: NextRequest) {
 
     // Sending email with resend
     const data = await resend.emails.send({
-      from: 'Adi Dent Website <onboarding@resend.dev>', // Change this when you verify your domain
-      to: ['info@adident.al'], // Your clinic email
+      from: 'Adi Dent Website <onboarding@resend.dev>', // Domain to be changed
+      to: ['oert64@gmail.com'], // Clinic Email to be changed
       subject: `Mesazh i Ri nga ${validatedData.name}`,
       html: `
         <h2>Mesazh i Ri nga Faqja e Klinikës</h2>
