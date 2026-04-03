@@ -1,6 +1,4 @@
-import styled from 'styled-components';
-
-/* ================= CONTACT SECTION ================= */
+import styled from "styled-components";
 
 export const ContactSection = styled.section`
   padding: 6rem 1.5rem;
@@ -11,8 +9,6 @@ export const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
 `;
-
-/* ================= TITLES ================= */
 
 export const Title = styled.h2`
   font-size: 2.75rem;
@@ -29,8 +25,6 @@ export const Subtitle = styled.p`
   margin-bottom: 3rem;
 `;
 
-/* ================= GRID ================= */
-
 export const ContentGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -43,13 +37,11 @@ export const ContentGrid = styled.div`
   }
 `;
 
-/* ================= INFO BOX ================= */
-
 export const InfoBox = styled.div`
   background: #ffffff;
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 
   h3 {
     font-size: 1.5rem;
@@ -58,8 +50,6 @@ export const InfoBox = styled.div`
     color: #111827;
   }
 `;
-
-/* ================= INFO ITEMS ================= */
 
 export const InfoItem = styled.div`
   display: flex;
@@ -81,7 +71,8 @@ export const InfoItem = styled.div`
       margin-bottom: 0.25rem;
     }
 
-    a, span {
+    a,
+    span {
       font-size: 0.95rem;
       color: #6b7280;
       text-decoration: none;
