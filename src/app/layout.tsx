@@ -1,14 +1,8 @@
 import type { Metadata } from 'next';
-import { Inter, Poppins } from 'next/font/google';
 import StyledComponentsRegistry from '@/lib/registry';
 import ThemeWrapper, { Header } from '@/components/ThemeWrapper';
-
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '600', '700'],
-  variable: '--font-poppins',
-});
+import { GeistSans } from 'geist/font/sans';
+import { GeistMono } from 'geist/font/mono';
 
 export const metadata: Metadata = {
   title: 'Klinika Dentare Adi Dent - Tiranë',
@@ -23,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="sq">
-      <body className={`${inter.variable} ${poppins.variable}`}>
+      <body className={`${GeistSans.variable} ${GeistMono.variable}`}>
         <StyledComponentsRegistry>
           <ThemeWrapper>
             <Header />

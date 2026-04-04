@@ -4,6 +4,7 @@ import Services from '@/components/sections/Services';
 import Testimonials from '@/components/sections/Testimonials';
 import Contact from '@/components/sections/Contact';
 import Location from '@/components/sections/Location';
+import './globals.css';
 
 export default function Home() {
   return (
