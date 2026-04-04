@@ -37,25 +37,30 @@ const GlobalStyles = createGlobalStyle`
     margin-bottom: 1rem;
   }
 
-  a {
-    text-decoration: none;
-    color: ${({ theme }) => theme.colors.primary || '#2563eb'};
-    transition: color 0.2s ease-in-out;
-
-    &:hover {
-      color: ${({ theme }) => theme.colors.accent || '#3b82f6'};
-    }
-  }
-
   button {
     font-family: inherit;
     cursor: pointer;
     border: none;
     background: none;
     transition: all 0.2s ease-in-out;
+    font-size: inherit; 
+    line-height: inherit; 
 
     &:hover {
       opacity: 0.85;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: ${({ theme }) => theme.colors.primary || '#2563eb'};
+    transition: color 0.2s ease-in-out;
+    cursor: pointer;
+    font-size: inherit; 
+    line-height: inherit; 
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.accent || '#3b82f6'};
     }
   }
 

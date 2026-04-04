@@ -149,34 +149,34 @@ export const InfoCard = styled.div`
   .detail { color: rgba(255, 255, 255, 0.9); font-size: 0.95rem; }
 `;
 
-export const ScrollIndicator = styled.div`
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: bounce 2s infinite;
+// export const ScrollIndicator = styled.div`
+//   position: absolute;
+//   bottom: 0rem;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   animation: bounce 2s infinite;
 
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-    40% { transform: translateX(-50%) translateY(-10px); }
-    60% { transform: translateX(-50%) translateY(-5px); }
-  }
+//   @keyframes bounce {
+//     0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+//     40% { transform: translateX(-50%) translateY(-10px); }
+//     60% { transform: translateX(-50%) translateY(-5px); }
+//   }
 
-  .mouse {
-    width: 24px;
-    height: 40px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 15px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 8px;
+//   .mouse {
+//     width: 24px;
+//     height: 40px;
+//     border: 2px solid rgba(255, 255, 255, 0.5);
+//     border-radius: 15px;
+//     display: flex;
+//     align-items: flex-start;
+//     justify-content: center;
+//     padding: 8px;
 
-    .wheel {
-      width: 3px;
-      height: 8px;
-      background: rgba(255, 255, 255, 0.7);
-      border-radius: 2px;
-    }
-  }
-`;
+//     .wheel {
+//       width: 3px;
+//       height: 8px;
+//       background: rgba(255, 255, 255, 0.7);
+//       border-radius: 2px;
+//     }
+//   }
+// `;

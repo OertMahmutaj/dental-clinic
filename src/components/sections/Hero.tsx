@@ -11,7 +11,7 @@ import {
   ButtonGroup,
   Button,
   InfoGrid,
-  ScrollIndicator
+  // ScrollIndicator
 } from '@/styles/Hero.styles';
 
 export default function Hero() {
@@ -76,11 +76,11 @@ export default function Hero() {
         </InfoGrid>
       </Container>
 
-      <ScrollIndicator>
+      {/* <ScrollIndicator>
         <div className="mouse">
           <div className="wheel" />
         </div>
-      </ScrollIndicator>
+      </ScrollIndicator> */}
     </HeroSection>
   );
 }
