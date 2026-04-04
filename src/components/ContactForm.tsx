@@ -65,7 +65,7 @@ export default function ContactForm() {
     <FormContainer onSubmit={handleSubmit(onSubmit)}>
       {submitSuccess && (
         <SuccessMessage>
-          ✓ Mesazhi juaj u dërgua me sukses! Do t&aposju kontaktojmë së shpejti.
+          ✓ Mesazhi juaj u dërgua me sukses! Do t&apos;ju kontaktojmë së shpejti.
         </SuccessMessage>
       )}
 
