@@ -2,8 +2,8 @@ import { ClinicInfo, Service, Testimonial } from '@/types';
 
 export const clinicInfo: ClinicInfo = {
   name: 'Klinika Dentare Adi Dent',
-  phone: '+355695579998',
-  whatsapp: '355695579998', 
+  phone: '+355685008686', //to be changed to clinic number
+  whatsapp: '355685008686', //to be changed to clinic number
   email: 'info@adident.al', 
   address: 'Shkolla e Baletit, Rruga Petro Nini Luarasi, Tiranë 1001, Albania',
   coordinates: {
