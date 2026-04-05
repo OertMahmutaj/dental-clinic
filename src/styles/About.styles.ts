@@ -1,13 +1,19 @@
 import styled from 'styled-components';
 
 export const AboutSection = styled.section`
-  padding: 5rem 1.5rem;
+  padding: 2rem;
   background: #ffffff;
 `;
 
 export const Container = styled.div`
-  max-width: 1200px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
   margin: 0 auto;
+  padding: ${({ theme }) => theme.spacing.lg};
+  text-align: center;
 `;
 
 export const TextCenter = styled.div`
@@ -53,26 +59,16 @@ export const GridTwoColumns = styled.div`
 `;
 
 export const InfoCard = styled.div`
-  display: flex;
-  gap: 1rem;
-  padding: 1rem;
-  background: #eff6ff;
+  background-color: ${({ theme }) => theme.colors.white};
+  padding: 2rem;
   border-radius: 0px;
-  align-items: flex-start;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid ${({ theme }) => theme.colors.lightGray};
+  transition: all 0.3s ease;
 
-  span {
-    font-size: 2rem;
-  }
-
-  h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 0.25rem;
-  }
-
-  p {
-    color: #4b5563;
+  &:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   }
 `;
 
