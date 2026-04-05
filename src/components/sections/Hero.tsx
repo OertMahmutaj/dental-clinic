@@ -52,7 +52,7 @@ export default function Hero() {
           </Button>
         </ButtonGroup>
 
-        <InfoGrid>
+        {/* <InfoGrid>
           <InfoCard>
             <div className="icon">⏰</div>
             <div className="label">Orari</div>
@@ -73,7 +73,7 @@ export default function Hero() {
             <div className="title">Ekip Profesional</div>
             <div className="detail">Teknologji Moderne</div>
           </InfoCard>
-        </InfoGrid>
+        </InfoGrid> */}
       </Container>
 
       {/* <ScrollIndicator>

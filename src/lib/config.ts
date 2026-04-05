@@ -47,8 +47,8 @@ export const services: Service[] = [
 export const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: 'Elona M.',
-    text: 'Shërbim profesional dhe mjaft i kujdesshëm. Rekomandoj pa hezitim!',
+    name: 'Mozzik Albanian',
+    text: 'The best doctor,in my music show i broke my leg and he fixed it😁he put teeths inside of my bones. …',
     rating: 5,
   },
   {

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ServicesSection = styled.section`
-  padding: 5rem 2rem;
+  padding: 1rem 2rem;
   background: ${({ theme }) => theme.colors.background};
 `;
 

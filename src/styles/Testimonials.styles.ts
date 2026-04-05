@@ -47,7 +47,7 @@ export const Divider = styled.div`
 
 export const TestimonialCard = styled.div`
   background: linear-gradient(to bottom right, ${({ theme }) => theme.colors.primary}10, ${({ theme }) => theme.colors.secondary}10);
-  border-radius: 2rem;
+  border-radius: 0px;
   padding: 3rem;
   margin-bottom: 2rem;
   min-height: 300px;
@@ -60,7 +60,6 @@ export const TestimonialText = styled.p`
   font-size: 1.5rem;
   color: ${({ theme }) => theme.colors.dark};
   line-height: 1.8;
-  font-style: italic;
   margin-bottom: 2rem;
 `;
 

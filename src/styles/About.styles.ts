@@ -57,7 +57,7 @@ export const InfoCard = styled.div`
   gap: 1rem;
   padding: 1rem;
   background: #eff6ff;
-  border-radius: 1rem;
+  border-radius: 0px;
   align-items: flex-start;
 
   span {
