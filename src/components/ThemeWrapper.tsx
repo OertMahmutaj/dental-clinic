@@ -4,7 +4,7 @@ import React, { ReactNode } from 'react';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from '@/styles/GlobalStyles';
 import { theme } from '@/styles/theme';
-import { TopButtonsBar, TopButton, ScrollToContactButton } from '@/styles/Header.styles';
+import { TopButtonsBar, TopButton, ScrollToContactButton, TopCompanyName } from '@/styles/Header.styles';
 import { clinicInfo } from '@/lib/config';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
@@ -21,7 +21,9 @@ export function Header() {
   };
 
   return (
+
     <TopButtonsBar>
+      <TopCompanyName>{`Adi Dent`}</TopCompanyName>
       {/* <RotatingTooth /> */}
       <TopButton href={`tel:${clinicInfo.phone}`}><FontAwesomeIcon icon={faPhone} /> {`Telefon`}</TopButton>
       <TopButton href={`https://wa.me/${clinicInfo.whatsapp}`} target="_blank" rel="noopener noreferrer">
@@ -29,6 +31,7 @@ export function Header() {
       </TopButton>
       <ScrollToContactButton onClick={scrollToContact}><FontAwesomeIcon icon={faEnvelope} /> {`Kontakt`}</ScrollToContactButton>
     </TopButtonsBar>
+
   );
 }
 

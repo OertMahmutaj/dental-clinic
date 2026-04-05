@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 
+export const TopCompanyName = styled.div`
+  display: flex;
+`
+
 export const TopButtonsBar = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: right;
   flex-direction: row;
   align-items: flex-start;
   gap: 1rem;
