@@ -6,11 +6,9 @@ import {
   Container,
   Badge,
   Title,
-  InfoCard,
   Subtitle,
   ButtonGroup,
   Button,
-  InfoGrid,
   // ScrollIndicator
 } from '@/styles/Hero.styles';
 
