@@ -3,7 +3,7 @@ import '@/lib/config.fontawesome';
 import StyledComponentsRegistry from '@/lib/registry';
 import ThemeWrapper, { Header } from '@/components/ThemeWrapper';
 import { GeistSans } from 'geist/font/sans';
-import { GeistMono } from 'geist/font/mono';
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
   title: 'Klinika Dentare Adi Dent - Tiranë',
@@ -18,11 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="sq">
-      <body className={`${GeistSans.variable} ${GeistMono.variable}`}>
+      <body className={GeistSans.variable}>
         <StyledComponentsRegistry>
           <ThemeWrapper>
             <Header />
             {children}
+            <Analytics />
           </ThemeWrapper>
         </StyledComponentsRegistry>
       </body>
