@@ -41,7 +41,7 @@ export const DirectionsButton = styled.a`
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
-  border-radius: 9999px;
+  border-radius: 0px;
   text-decoration: none;
   transition: all 0.3s ease;
 

@@ -94,7 +94,7 @@ interface StatCardProps {
 export const StatCard = styled.div<StatCardProps>`
   background: linear-gradient(135deg, ${(props) => props.$colorFrom}, ${(props) => props.$colorTo});
   padding: 2rem;
-  border-radius: 1.5rem;
+  border-radius: 0px;
   color: #fff;
   text-align: center;
   font-weight: 700;

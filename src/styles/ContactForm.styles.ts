@@ -6,7 +6,7 @@ export const FormContainer = styled.form`
   margin: 0 auto;
   padding: 2rem;
   background-color: ${({ theme }) => theme.colors.offWhite};
-  border-radius: 12px;
+  border-radius: 0px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 `;
 
@@ -24,7 +24,7 @@ export const Label = styled.label`
 
 export const Input = styled.input<{ className?: string }>`
   padding: 0.75rem 1rem;
-  border-radius: 8px;
+  border-radius: 0px;
   border: 1px solid ${({ theme }) => theme.colors.gray};
   font-size: 1rem;
   transition: border 0.2s, box-shadow 0.2s;
@@ -42,7 +42,7 @@ export const Input = styled.input<{ className?: string }>`
 
 export const Textarea = styled.textarea<{ className?: string }>`
   padding: 0.75rem 1rem;
-  border-radius: 8px;
+  border-radius: 0px;
   border: 1px solid ${({ theme }) => theme.colors.gray};
   font-size: 1rem;
   resize: vertical;
@@ -75,7 +75,7 @@ export const SuccessMessage = styled.div`
   background-color: ${({ theme }) => theme.colors.success};
   color: ${({ theme }) => theme.colors.white};
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 0px;
   text-align: center;
   margin-bottom: 1.5rem;
   animation: ${fadeIn} 0.3s ease-out;
@@ -83,7 +83,7 @@ export const SuccessMessage = styled.div`
 
 export const SubmitButton = styled.button`
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 0px;
   background-color: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.white};
   font-size: 1rem;

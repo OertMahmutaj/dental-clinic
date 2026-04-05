@@ -40,7 +40,7 @@ export const ContentGrid = styled.div`
 export const InfoBox = styled.div`
   background: #ffffff;
   padding: 2rem;
-  border-radius: 1rem;
+  border-radius: 0px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 
   h3 {

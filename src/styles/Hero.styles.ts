@@ -7,7 +7,7 @@ export const HeroSection = styled.section`
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #667eea 0%, #3432c9 100%);
 
   &::before {
     content: '';
@@ -27,8 +27,11 @@ export const HeroSection = styled.section`
 
 export const Container = styled.div`
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
   z-index: 10;
-  max-width: 1200px;
   margin: 0 auto;
   padding: ${({ theme }) => theme.spacing.lg};
   text-align: center;
@@ -42,7 +45,7 @@ export const Badge = styled.div`
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 0.75rem 1.5rem;
-  border-radius: ${({ theme }) => theme.borderRadius.full};
+  border-radius: 0px;
   color: white;
   font-size: 0.9rem;
   font-weight: 500;
@@ -63,7 +66,7 @@ export const Title = styled.h1`
 
   span {
     display: block;
-    background: linear-gradient(90deg, #ffd89b 0%, #19547b 100%);
+    background: rgba(255, 255, 255, 0.9);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -99,7 +102,7 @@ export const Button = styled.button<{ $variant?: 'primary' | 'whatsapp' }>`
   padding: 1rem 2rem;
   font-size: 1.1rem;
   font-weight: 600;
-  border-radius: ${({ theme }) => theme.borderRadius.lg};
+  border-radius: 0px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 
@@ -121,12 +124,18 @@ export const Button = styled.button<{ $variant?: 'primary' | 'whatsapp' }>`
 
 export const InfoGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 5rem;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 96rem;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
   animation: fadeInUp 1s ease-out 0.8s both;
 `;
 
@@ -135,7 +144,7 @@ export const InfoCard = styled.div`
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 2rem;
-  border-radius: ${({ theme }) => theme.borderRadius.xl};
+  border-radius: 0px;
   transition: all 0.3s ease;
 
   &:hover {

@@ -20,9 +20,6 @@ export default function Location() {
       <Container>
         <Title>Si të Na Gjeni</Title>
         <Subtitle>{clinicInfo.address}</Subtitle>
-
-        <GoogleMap />
-
         <ButtonContainer>
           <DirectionsButton
             href={directionsUrl}
@@ -32,6 +29,9 @@ export default function Location() {
             🗺️ Hap në Google Maps
           </DirectionsButton>
         </ButtonContainer>
+        <GoogleMap />
+
+
       </Container>
     </LocationSection>
   );

@@ -42,7 +42,7 @@ export const Divider = styled.div`
   height: 0.25rem;
   background-color: ${({ theme }) => theme.colors.primary};
   margin: 1rem auto 0 auto;
-  border-radius: 9999px;
+  border-radius: 0px;
 `;
 
 export const TestimonialCard = styled.div`
@@ -115,7 +115,7 @@ interface DotProps {
 export const Dot = styled.button<DotProps>`
   width: ${({ $active }) => ($active ? '2rem' : '0.75rem')};
   height: 0.75rem;
-  border-radius: 9999px;
+  border-radius: 0px;
   background-color: ${({ theme, $active }) => ($active ? theme.colors.primary : theme.colors.gray)};
   transition: all 0.3s;
   border: none;
@@ -141,7 +141,7 @@ export const GoogleButton = styled.a`
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  border-radius: 1rem;
+  border-radius: 0px;
   border: 2px solid ${({ theme }) => theme.colors.gray};
   background-color: ${({ theme }) => theme.colors.white};
   color: ${({ theme }) => theme.colors.dark};

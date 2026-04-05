@@ -67,7 +67,7 @@ export const ServicesGrid = styled.div`
 export const ServiceCard = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
   padding: 2rem;
-  border-radius: 1.5rem;
+  border-radius: 0px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   border: 1px solid ${({ theme }) => theme.colors.lightGray};
   transition: all 0.3s ease;
@@ -122,7 +122,7 @@ export const ExtraServices = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding: 2rem;
-  border-radius: 1.5rem;
+  border-radius: 0px;
   background: linear-gradient(
     90deg,
     ${({ theme }) => theme.colors.primary},
@@ -148,7 +148,7 @@ export const ExtraButton = styled.a`
   background-color: ${({ theme }) => theme.colors.white};
   color: ${({ theme }) => theme.colors.primary};
   padding: 0.75rem 2rem;
-  border-radius: 1rem;
+  border-radius: 0px;
   font-weight: 600;
   transition: background-color 0.3s ease;
 

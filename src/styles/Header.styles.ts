@@ -23,8 +23,8 @@ export const TopButton = styled.a`
   font-size: 0.95rem;
   color: #e4e6eb;
   background: #516EFF;
-  border-radius: 8px;
-  border: 1px solid #d1d5db;
+  border-radius: 0px;
+  border: 1px solid #ebeff5;
   text-decoration: none;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -46,7 +46,7 @@ export const ScrollToContactButton = styled.button`
   font-size: 0.95rem;
   color: #e4e6eb;
   background: #516EFF;
-  border-radius: 8px;
+  border-radius: 0px;
   border: 1px solid #d1d5db;
   text-decoration: none;
   transition: all 0.3s ease;
