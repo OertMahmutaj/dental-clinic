@@ -14,19 +14,17 @@ const center = {
 };
 
 export default function Map() {
-  const mapRef = useRef<HTMLDivElement>(null); // Add this
-  const markerRef = useRef<google.maps.marker.AdvancedMarkerElement | null>(null); // Add this
+  const mapRef = useRef<HTMLDivElement>(null);
+  const markerRef = useRef<google.maps.marker.AdvancedMarkerElement | null>(null);
   const { isLoaded } = useGoogleMaps();
 
   useEffect(() => {
     if (!isLoaded || !mapRef.current) return;
 
     const initMap = async () => {
-      // Import the marker library
       const { Map } = await google.maps.importLibrary("maps") as google.maps.MapsLibrary;
       const { AdvancedMarkerElement } = await google.maps.importLibrary("marker") as google.maps.MarkerLibrary;
 
-      // Create map
       const map = new Map(mapRef.current!, {
         center: center,
         zoom: 15,
