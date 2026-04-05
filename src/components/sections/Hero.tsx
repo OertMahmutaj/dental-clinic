@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faPhone, faTooth } from '@fortawesome/free-solid-svg-icons';
 
-
 import { clinicInfo } from '@/lib/config';
 import {
   HeroSection,
@@ -14,7 +13,6 @@ import {
   Subtitle,
   ButtonGroup,
   Button,
-  // ScrollIndicator
 } from '@/styles/Hero.styles';
 
 export default function Hero() {

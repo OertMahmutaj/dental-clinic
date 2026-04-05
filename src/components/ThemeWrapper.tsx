@@ -9,6 +9,7 @@ import { clinicInfo } from '@/lib/config';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+// import RotatingTooth from "@/components/RotatingTooth";
 
 interface ThemeWrapperProps {
   children: ReactNode;
@@ -21,6 +22,7 @@ export function Header() {
 
   return (
     <TopButtonsBar>
+      {/* <RotatingTooth /> */}
       <TopButton href={`tel:${clinicInfo.phone}`}><FontAwesomeIcon icon={faPhone} /> Telefon</TopButton>
       <TopButton href={`https://wa.me/${clinicInfo.whatsapp}`} target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faWhatsapp} /> WhatsApp
