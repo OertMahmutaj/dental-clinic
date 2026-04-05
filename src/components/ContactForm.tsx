@@ -32,7 +32,7 @@ export default function ContactForm() {
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
-    
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -49,7 +49,7 @@ export default function ContactForm() {
       setSubmitSuccess(true);
       reset();
 
-      // Hide success message after 5 seconds
+      //timeout 5 secs
       setTimeout(() => {
         setSubmitSuccess(false);
       }, 5000);

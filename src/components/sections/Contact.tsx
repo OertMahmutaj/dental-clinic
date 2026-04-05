@@ -18,10 +18,10 @@ export default function Contact() {
   return (
     <ContactSection id="contact">
       <Container>
-        <Title>Na Kontaktoni</Title>
+        <Title>{`Na Kontaktoni`}</Title>
         <Subtitle>
-          Jemi këtu për t&aposju ndihmuar. Plotësoni formularin ose na kontaktoni
-          direkt.
+          {`Jemi këtu për t'ju ndihmuar. Plotësoni formularin ose na kontaktoni
+          direkt.`}
         </Subtitle>
 
         <ContentGrid>
@@ -30,12 +30,12 @@ export default function Contact() {
           </div>
 
           <InfoBox>
-            <h3>Informacione Kontakti</h3>
+            <h3>{`Informacione Kontakti`}</h3>
             
             <InfoItem>
               <span className="icon"><FontAwesomeIcon icon={faPhone} /></span>
               <div className="content">
-                <strong>Telefon</strong>
+                <strong>{`Telefon`}</strong>
                 <a href={`tel:${clinicInfo.phone}`}>{clinicInfo.phone}</a>
               </div>
             </InfoItem>
@@ -43,13 +43,13 @@ export default function Contact() {
             <InfoItem>
               <span className="icon"><FontAwesomeIcon icon={faSquareWhatsapp} /></span>
               <div className="content">
-                <strong>WhatsApp</strong>
+                <strong>{`WhatsApp`}</strong>
                 <a
                   href={`https://wa.me/${clinicInfo.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Dërgo mesazh
+                  {`Dërgo mesazh`}
                 </a>
               </div>
             </InfoItem>
@@ -57,7 +57,7 @@ export default function Contact() {
             <InfoItem>
               <span className="icon"><FontAwesomeIcon icon={faEnvelope} /></span>
               <div className="content">
-                <strong>Email</strong>
+                <strong>{`Email`}</strong>
                 <a href={`mailto:${clinicInfo.email}`}>{clinicInfo.email}</a>
               </div>
             </InfoItem>
@@ -65,7 +65,7 @@ export default function Contact() {
             <InfoItem>
               <span className="icon"><FontAwesomeIcon icon={faMapMarkerAlt} /></span>
               <div className="content">
-                <strong>Adresa</strong>
+                <strong>{`Adresa`}</strong>
                 <span>{clinicInfo.address}</span>
               </div>
             </InfoItem>
@@ -73,12 +73,12 @@ export default function Contact() {
             <InfoItem>
               <span className="icon"><FontAwesomeIcon icon={faClock} /></span>
               <div className="content">
-                <strong>Orari</strong>
-                <span>E Hënë - E Premte: {clinicInfo.hours.weekdays}</span>
+                <strong>{`Orari`}</strong>
+                <span>{`E Hënë - E Premte:`} {clinicInfo.hours.weekdays}</span>
                 <br />
-                <span>E Shtunë: {clinicInfo.hours.saturday}</span>
+                <span>{`E Shtunë:`} {clinicInfo.hours.saturday}</span>
                 <br />
-                <span>E Diel: {clinicInfo.hours.sunday}</span>
+                <span>{`E Diel:`} {clinicInfo.hours.sunday}</span>
               </div>
             </InfoItem>
           </InfoBox>

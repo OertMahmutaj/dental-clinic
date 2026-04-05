@@ -29,27 +29,27 @@ export default function Hero() {
       <Container>
         <Badge>
           <span><FontAwesomeIcon icon={faTooth} /></span>
-          <span>Klinika Juaj Dentare në Tiranë</span>
+          <span>{`Klinika Juaj Dentare në Tiranë`}</span>
         </Badge>
 
         <Title>
-          Buzëqeshja juaj e<br />
-          <span>përsosur fillon këtu</span>
+          {`Buzëqeshja juaj`}<br />
+          <span>{`perfekte fillon këtu`}</span>
         </Title>
 
         <Subtitle>
-          Shërbime dentare profesionale me teknologji moderne dhe ekip të
-          ekspertizuar në zemër të Tiranës.
+          {`Shërbime dentare profesionale me teknologji moderne dhe ekip të
+          ekspertizuar në zemër të Tiranës.`}
         </Subtitle>
 
         <ButtonGroup>
           <Button onClick={handleCall}>
             <FontAwesomeIcon icon={faPhone} />
-            Rezervo Takimin
+            {`Rezervo Takimin`}
           </Button>
           <Button $variant="whatsapp" onClick={handleWhatsApp}>
             <FontAwesomeIcon icon={faWhatsapp} />
-            WhatsApp
+            {`WhatsApp`}
           </Button>
         </ButtonGroup>
 

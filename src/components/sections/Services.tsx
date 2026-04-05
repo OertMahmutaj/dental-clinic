@@ -35,9 +35,9 @@ export default function Services() {
     <ServicesSection id="services">
       <Container>
         <TitleWrapper>
-          <Title>Shërbimet <span>Tona</span></Title>
+          <Title>{`Shërbimet`} <span>{`Tona`}</span></Title>
           <Subtitle>
-            Ofrojmë një gamë të plotë shërbimesh dentare me standarde të larta cilësore
+            {`Ofrojmë një gamë të plotë shërbimesh dentare me standarde të larta cilësore`}
           </Subtitle>
           <Divider />
         </TitleWrapper>
@@ -49,18 +49,18 @@ export default function Services() {
               <ServiceTitle>{service.title}</ServiceTitle>
               <ServiceDescription>{service.description}</ServiceDescription>
               <Link href={`/services/${service.slug}`}>
-                <ServiceCTA>Mëso më shumë →</ServiceCTA>
+                <ServiceCTA>{`Mëso më shumë →`}</ServiceCTA>
               </Link>
             </ServiceCard>
           ))}
         </ServicesGrid>
 
         <ExtraServices>
-          <ExtraTitle>Shërbime të Tjera</ExtraTitle>
+          <ExtraTitle>{`Shërbime të Tjera`}</ExtraTitle>
           <ExtraDescription>
-            Endodonci • Kirurgji Orale • Proteza Dentare • Pediatri Dentare • Periodontologji
+            {`Endodonci • Kirurgji Orale • Proteza Dentare • Pediatri Dentare • Periodontologji`}
           </ExtraDescription>
-          <ExtraButton href="tel:+355695579998">Kontaktoni për Detaje</ExtraButton>
+          <ExtraButton href="tel:+355695579998">{`Kontaktoni për Detaje`}</ExtraButton>
         </ExtraServices>
       </Container>
     </ServicesSection>

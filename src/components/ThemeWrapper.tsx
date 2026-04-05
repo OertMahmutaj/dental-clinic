@@ -23,11 +23,11 @@ export function Header() {
   return (
     <TopButtonsBar>
       {/* <RotatingTooth /> */}
-      <TopButton href={`tel:${clinicInfo.phone}`}><FontAwesomeIcon icon={faPhone} /> Telefon</TopButton>
+      <TopButton href={`tel:${clinicInfo.phone}`}><FontAwesomeIcon icon={faPhone} /> {`Telefon`}</TopButton>
       <TopButton href={`https://wa.me/${clinicInfo.whatsapp}`} target="_blank" rel="noopener noreferrer">
-        <FontAwesomeIcon icon={faWhatsapp} /> WhatsApp
+        <FontAwesomeIcon icon={faWhatsapp} /> {`WhatsApp`}
       </TopButton>
-      <ScrollToContactButton onClick={scrollToContact}><FontAwesomeIcon icon={faEnvelope} /> Kontakt</ScrollToContactButton>
+      <ScrollToContactButton onClick={scrollToContact}><FontAwesomeIcon icon={faEnvelope} /> {`Kontakt`}</ScrollToContactButton>
     </TopButtonsBar>
   );
 }

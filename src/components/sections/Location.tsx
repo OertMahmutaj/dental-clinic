@@ -18,7 +18,7 @@ export default function Location() {
   return (
     <LocationSection id="location">
       <Container>
-        <Title>Si të Na Gjeni</Title>
+        <Title>{`Si të Na Gjeni`}</Title>
         <Subtitle>{clinicInfo.address}</Subtitle>
         <ButtonContainer>
           <DirectionsButton
@@ -26,7 +26,7 @@ export default function Location() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            🗺️ Hap në Google Maps
+            {`🗺️ Hap në Google Maps`}
           </DirectionsButton>
         </ButtonContainer>
         <GoogleMap />

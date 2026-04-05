@@ -19,7 +19,7 @@ export default function About() {
       <Container>
         <TextCenter>
           <h2>
-            Rreth <span>Adi Dent</span>
+            {`Rreth`} <span>{`Adi Dent`}</span>
           </h2>
           <div className="divider" />
         </TextCenter>
@@ -27,23 +27,23 @@ export default function About() {
         <GridTwoColumns>
           <div>
             <p>
-              Klinika Dentare Adi Dent është një nga klinikat më të besueshme
+              {`Klinika Dentare Adi Dent është një nga klinikat më të besueshme
               në Tiranë, e pajisur me teknologjinë më të fundit dentare dhe
-              një ekip profesionistësh të dedikuar për shëndetin tuaj oral.
+              një ekip profesionistësh të dedikuar për shëndetin tuaj oral.`}
             </p>
             <p>
-              Ne ofrojmë një gamë të gjerë shërbimesh, nga higjiena dentare
+              {`Ne ofrojmë një gamë të gjerë shërbimesh, nga higjiena dentare
               deri tek implante dhe estetika dentare, duke garantuar rezultate
-              cilësore dhe kujdes të personalizuar për çdo pacient.
+              cilësore dhe kujdes të personalizuar për çdo pacient.`}
             </p>
 
             <InfoCard>
               <span><FontAwesomeIcon icon={faHandHoldingHeart} /></span>
               <div>
-                <h3>Misioni Ynë</h3>
+                <h3>{`Misioni Ynë`}</h3>
                 <p>
-                  Të krijojmë buzëqeshje të shëndetshme dhe të lumtura
-                  përmes kujdesit profesional dhe trajtimit me respekt.
+                  {`Të krijojmë buzëqeshje të shëndetshme dhe të lumtura
+                  përmes kujdesit profesional dhe trajtimit me respekt.`}
                 </p>
               </div>
             </InfoCard>
@@ -51,20 +51,20 @@ export default function About() {
 
           <StatsGrid>
             <StatCard $colorFrom="#3b82f6" $colorTo="#2563eb">
-              <div>10+</div>
-              <div>Vite Eksperiencë</div>
+              <div>{`10+`}</div>
+              <div>{`Vite Eksperiencë`}</div>
             </StatCard>
             <StatCard $colorFrom="#14b8a6" $colorTo="#0f766e">
-              <div>5000+</div>
-              <div>Pacientë të Kënaqur</div>
+              <div>{`5000+`}</div>
+              <div>{`Pacientë të Kënaqur`}</div>
             </StatCard>
             <StatCard $colorFrom="#8b5cf6" $colorTo="#7c3aed">
-              <div>100%</div>
-              <div>Profesionalizëm</div>
+              <div>{`100%`}</div>
+              <div>{`Profesionalizëm`}</div>
             </StatCard>
             <StatCard $colorFrom="#f97316" $colorTo="#ea580c">
-              <div>24/7</div>
-              <div>Mbështetje</div>
+              <div>{`24/7`}</div>
+              <div>{`Mbështetje`}</div>
             </StatCard>
           </StatsGrid>
         </GridTwoColumns>
