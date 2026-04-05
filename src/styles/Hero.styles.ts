@@ -97,13 +97,15 @@ export const ButtonGroup = styled.div`
 export const Button = styled.button<{ $variant?: 'primary' | 'whatsapp' }>`
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 0.4rem;
   font-weight: 600;
+  font-size: 0.95rem;
+  color: #e4e6eb;
   border-radius: 0px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
 
   ${({ $variant }) =>
     $variant === 'whatsapp'

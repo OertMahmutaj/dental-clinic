@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import '@/lib/config.fontawesome';
 import StyledComponentsRegistry from '@/lib/registry';
 import ThemeWrapper, { Header } from '@/components/ThemeWrapper';
 import { GeistSans } from 'geist/font/sans';

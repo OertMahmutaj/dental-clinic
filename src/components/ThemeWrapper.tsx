@@ -6,6 +6,9 @@ import GlobalStyles from '@/styles/GlobalStyles';
 import { theme } from '@/styles/theme';
 import { TopButtonsBar, TopButton, ScrollToContactButton } from '@/styles/Header.styles';
 import { clinicInfo } from '@/lib/config';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 interface ThemeWrapperProps {
   children: ReactNode;
@@ -18,11 +21,11 @@ export function Header() {
 
   return (
     <TopButtonsBar>
-      <TopButton href={`tel:${clinicInfo.phone}`}>📞 {clinicInfo.phone}</TopButton>
+      <TopButton href={`tel:${clinicInfo.phone}`}><FontAwesomeIcon icon={faPhone} /> {`Kontakto`}</TopButton>
       <TopButton href={`https://wa.me/${clinicInfo.whatsapp}`} target="_blank" rel="noopener noreferrer">
-        💬 WhatsApp
+        <FontAwesomeIcon icon={faWhatsapp} /> WhatsApp
       </TopButton>
-      <ScrollToContactButton onClick={scrollToContact}>📩 Kontakto</ScrollToContactButton>
+      <ScrollToContactButton onClick={scrollToContact}><FontAwesomeIcon icon={faEnvelope} /> Na shkruani</ScrollToContactButton>
     </TopButtonsBar>
   );
 }

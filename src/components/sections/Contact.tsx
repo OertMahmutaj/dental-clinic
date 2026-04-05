@@ -9,6 +9,9 @@ import {
   InfoBox,
   InfoItem,
 } from '@/styles/Contact.styles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faEnvelope, faMapMarkerAlt, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 
 export default function Contact() {
@@ -30,7 +33,7 @@ export default function Contact() {
             <h3>Informacione Kontakti</h3>
             
             <InfoItem>
-              <span className="icon">📞</span>
+              <span className="icon"><FontAwesomeIcon icon={faPhone} /></span>
               <div className="content">
                 <strong>Telefon</strong>
                 <a href={`tel:${clinicInfo.phone}`}>{clinicInfo.phone}</a>
@@ -38,7 +41,7 @@ export default function Contact() {
             </InfoItem>
 
             <InfoItem>
-              <span className="icon">💬</span>
+              <span className="icon"><FontAwesomeIcon icon={faWhatsapp} /></span>
               <div className="content">
                 <strong>WhatsApp</strong>
                 <a
@@ -52,7 +55,7 @@ export default function Contact() {
             </InfoItem>
 
             <InfoItem>
-              <span className="icon">📧</span>
+              <span className="icon"><FontAwesomeIcon icon={faEnvelope} /></span>
               <div className="content">
                 <strong>Email</strong>
                 <a href={`mailto:${clinicInfo.email}`}>{clinicInfo.email}</a>
@@ -60,7 +63,7 @@ export default function Contact() {
             </InfoItem>
 
             <InfoItem>
-              <span className="icon">📍</span>
+              <span className="icon"><FontAwesomeIcon icon={faMapMarkerAlt} /></span>
               <div className="content">
                 <strong>Adresa</strong>
                 <span>{clinicInfo.address}</span>
@@ -68,7 +71,7 @@ export default function Contact() {
             </InfoItem>
 
             <InfoItem>
-              <span className="icon">⏰</span>
+              <span className="icon"><FontAwesomeIcon icon={faClock} /></span>
               <div className="content">
                 <strong>Orari</strong>
                 <span>E Hënë - E Premte: {clinicInfo.hours.weekdays}</span>

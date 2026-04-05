@@ -1,5 +1,10 @@
 'use client';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+
+
 import { clinicInfo } from '@/lib/config';
 import {
   HeroSection,
@@ -41,11 +46,11 @@ export default function Hero() {
 
         <ButtonGroup>
           <Button onClick={handleCall}>
-            <span>📞</span>
+            <FontAwesomeIcon icon={faPhone} />
             Rezervo Takimin
           </Button>
           <Button $variant="whatsapp" onClick={handleWhatsApp}>
-            <span>💬</span>
+            <FontAwesomeIcon icon={faWhatsapp} />
             WhatsApp
           </Button>
         </ButtonGroup>
