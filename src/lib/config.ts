@@ -23,24 +23,28 @@ export const services: Service[] = [
     title: 'Higjiena Dentare',
     description: 'Pastrimi profesional dhe parandalimi i problemeve dentare',
     icon: 'tooth',
+    slug: 'higjiena-dentare',
   },
   {
     id: 2,
     title: 'Estetika Dentare',
     description: 'Zbardhje dhe restaurime estetike për buzëqeshjen tuaj',
     icon: 'sparkles',
+    slug: 'estetika-dentare',
   },
   {
     id: 3,
     title: 'Implante Dentare',
     description: 'Zëvendësimi i dhëmbëve të humbur me implante moderne',
     icon: 'screwdriver',
+    slug: 'implante-dentare',
   },
   {
     id: 4,
     title: 'Ortodonci',
     description: 'Korrigjimi i pozicionit të dhëmbëve me aparate',
     icon: 'smile',
+    slug: 'ortodonci',
   },
 ];
 
@@ -48,19 +52,19 @@ export const testimonials: Testimonial[] = [
   {
     id: 1,
     name: 'Mozzik Albanian',
-    text: 'The best doctor,in my music show i broke my leg and he fixed it😁he put teeths inside of my bones. …',
+    text: 'The best doctor,in my music show i broke my leg and he fixed it😁he put teeths inside of my bones…',
     rating: 5,
   },
   {
     id: 2,
-    name: 'Artan K.',
-    text: 'Klinika më e mirë në Tiranë. Stafi shumë i sjellshëm dhe ambiente moderne.',
+    name: 'Bjorni Q.',
+    text: 'Great experience at Adi Dent. I had tartar cleaning and a filling done, and everything was handled professionally and with care. The staff was friendly, the clinic was very clean, and I’m very satisfied with the results.',
     rating: 5,
   },
   {
     id: 3,
-    name: 'Mirela S.',
-    text: 'Rezultate të shkëlqyera në zbardhjen e dhëmbëve. Faleminderit!',
+    name: 'Celmenta R.',
+    text: 'Sherbim cilesor, korrekt dhe profesional. E rekomandoj, me shume siguri, per profesionalizmin dhe kushtet perfekte',
     rating: 5,
   },
 ];

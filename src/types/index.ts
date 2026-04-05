@@ -18,6 +18,7 @@ export interface Service {
   title: string;
   description: string;
   icon: string;
+  slug: string;
 }
 
 export interface ClinicInfo {

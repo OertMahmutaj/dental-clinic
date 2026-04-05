@@ -20,6 +20,7 @@ import {
 } from '@/styles/Services.styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTooth, faScrewdriverWrench, faFaceSmileBeam, IconDefinition, faWandMagicSparkles } from '@fortawesome/free-solid-svg-icons';
+import Link from "next/link";
 
 const iconMap: Record<string, IconDefinition> = {
   tooth: faTooth,
@@ -27,6 +28,7 @@ const iconMap: Record<string, IconDefinition> = {
   sparkles: faWandMagicSparkles,
   smile: faFaceSmileBeam,
 };
+
 
 export default function Services() {
   return (
@@ -46,7 +48,9 @@ export default function Services() {
               <FontAwesomeIcon icon={iconMap[service.icon]} />
               <ServiceTitle>{service.title}</ServiceTitle>
               <ServiceDescription>{service.description}</ServiceDescription>
-              <ServiceCTA>Mëso më shumë →</ServiceCTA>
+              <Link href={`/services/${service.slug}`}>
+                <ServiceCTA>Mëso më shumë →</ServiceCTA>
+              </Link>
             </ServiceCard>
           ))}
         </ServicesGrid>
