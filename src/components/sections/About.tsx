@@ -10,6 +10,8 @@ import {
   StatsGrid,
   StatCard,
 } from '@/styles/About.styles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHandHoldingHeart } from '@fortawesome/free-solid-svg-icons';
 
 export default function About() {
   return (
@@ -36,7 +38,7 @@ export default function About() {
             </p>
 
             <InfoCard>
-              <span>💙</span>
+              <span><FontAwesomeIcon icon={faHandHoldingHeart} /></span>
               <div>
                 <h3>Misioni Ynë</h3>
                 <p>

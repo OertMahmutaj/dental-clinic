@@ -11,7 +11,7 @@ import {
 } from '@/styles/Contact.styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faMapMarkerAlt, faClock } from '@fortawesome/free-solid-svg-icons';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faSquareWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 
 export default function Contact() {
@@ -41,7 +41,7 @@ export default function Contact() {
             </InfoItem>
 
             <InfoItem>
-              <span className="icon"><FontAwesomeIcon icon={faWhatsapp} /></span>
+              <span className="icon"><FontAwesomeIcon icon={faSquareWhatsapp} /></span>
               <div className="content">
                 <strong>WhatsApp</strong>
                 <a

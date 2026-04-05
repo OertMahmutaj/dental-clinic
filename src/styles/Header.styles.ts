@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 export const TopButtonsBar = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   flex-direction: row;
   align-items: flex-start;
   gap: 1rem;
-  padding: 2rem 1rem 2rem;
+  padding: 2rem 0 2rem;
   background: #ffffff;
   border-bottom: 1px solid #BCBCBC;
   position: sticky;

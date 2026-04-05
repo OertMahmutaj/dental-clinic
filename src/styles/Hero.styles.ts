@@ -32,7 +32,7 @@ export const Container = styled.div`
   overflow: hidden;
   z-index: 10;
   margin: 0 auto;
-  padding: ${({ theme }) => theme.spacing.lg};
+  padding: ${({ theme }) => `${theme.spacing.lg} 0`};
   text-align: center;
 `;
 

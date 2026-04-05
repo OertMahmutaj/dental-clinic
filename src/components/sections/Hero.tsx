@@ -2,7 +2,7 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faTooth } from '@fortawesome/free-solid-svg-icons';
 
 
 import { clinicInfo } from '@/lib/config';
@@ -30,7 +30,7 @@ export default function Hero() {
     <HeroSection>
       <Container>
         <Badge>
-          <span>🦷</span>
+          <span><FontAwesomeIcon icon={faTooth} /></span>
           <span>Klinika Juaj Dentare në Tiranë</span>
         </Badge>
 

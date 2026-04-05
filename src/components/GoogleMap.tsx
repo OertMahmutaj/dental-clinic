@@ -1,76 +1,49 @@
 'use client';
 
-import { useLoadScript, GoogleMap, Marker, InfoWindow } from '@react-google-maps/api';
-import { clinicInfo } from '@/lib/config';
-import styled from 'styled-components';
-
-const MapContainer = styled.div`
-  width: 100%;
-  height: 450px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-`;
-
-const LoadingContainer = styled.div`
-  width: 100%;
-  height: 450px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f3f4f6;
-  border-radius: 12px;
-`;
+import { useEffect, useRef } from 'react';
+import { useGoogleMaps } from '@/lib/googleMapsLoader';
 
 const mapContainerStyle = {
-    width: '100%',
-    height: '100%',
+  width: '100%',
+  height: '400px'
 };
 
 const center = {
-    lat: clinicInfo.coordinates.lat,
-    lng: clinicInfo.coordinates.lng,
-};
-
-const options = {
-    disableDefaultUI: false,
-    zoomControl: true,
-    mapTypeControl: false,
-    streetViewControl: false,
-    fullscreenControl: true,
+  lat: 41.3258039,
+  lng: 19.8269137
 };
 
 export default function Map() {
-    const { isLoaded, loadError } = useLoadScript({
-        googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || '',
-    });
+  const mapRef = useRef<HTMLDivElement>(null); // Add this
+  const markerRef = useRef<google.maps.marker.AdvancedMarkerElement | null>(null); // Add this
+  const { isLoaded } = useGoogleMaps();
 
-    if (loadError) {
-        return <div>Error loading maps</div>;
-    }
+  useEffect(() => {
+    if (!isLoaded || !mapRef.current) return;
 
-    if (!isLoaded) {
-        return <LoadingContainer>Duke ngarkuar hartën...</LoadingContainer>;
-    }
+    const initMap = async () => {
+      // Import the marker library
+      const { Map } = await google.maps.importLibrary("maps") as google.maps.MapsLibrary;
+      const { AdvancedMarkerElement } = await google.maps.importLibrary("marker") as google.maps.MarkerLibrary;
 
-    return (
-        <MapContainer>
-            <GoogleMap
-                mapContainerStyle={mapContainerStyle}
-                zoom={15}
-                center={center}
-                options={options}
-            >
-                <Marker position={center}>
-                    <InfoWindow position={center}>
-                        <div>
-                            <strong>{clinicInfo.name}</strong>
-                            <br />
-                            {clinicInfo.address}
-                        </div>
-                    </InfoWindow>
-                </Marker>
-            </GoogleMap>
-        </MapContainer>
-    );
+      // Create map
+      const map = new Map(mapRef.current!, {
+        center: center,
+        zoom: 15,
+        mapId: 'YOUR_MAP_ID',
+      });
+
+      markerRef.current = new AdvancedMarkerElement({
+        map: map,
+        position: center,
+        title: 'Klinika Dentare Adi Dent',
+      });
+    };
+
+    initMap();
+  }, [isLoaded]);
+
+  if (!isLoaded) return <div>Loading map...</div>;
+
+  return <div ref={mapRef} style={mapContainerStyle} />;
 }

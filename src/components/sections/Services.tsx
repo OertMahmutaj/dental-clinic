@@ -10,7 +10,6 @@ import {
   Divider,
   ServicesGrid,
   ServiceCard,
-  ServiceIcon,
   ServiceTitle,
   ServiceDescription,
   ServiceCTA,
@@ -19,6 +18,15 @@ import {
   ExtraDescription,
   ExtraButton
 } from '@/styles/Services.styles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTooth, faScrewdriverWrench, faFaceSmileBeam, IconDefinition, faWandMagicSparkles } from '@fortawesome/free-solid-svg-icons';
+
+const iconMap: Record<string, IconDefinition> = {
+  tooth: faTooth,
+  screwdriver: faScrewdriverWrench,
+  sparkles: faWandMagicSparkles,
+  smile: faFaceSmileBeam,
+};
 
 export default function Services() {
   return (
@@ -35,7 +43,7 @@ export default function Services() {
         <ServicesGrid>
           {services.map((service) => (
             <ServiceCard key={service.id}>
-              <ServiceIcon>{service.icon}</ServiceIcon>
+              <FontAwesomeIcon icon={iconMap[service.icon]} />
               <ServiceTitle>{service.title}</ServiceTitle>
               <ServiceDescription>{service.description}</ServiceDescription>
               <ServiceCTA>Mëso më shumë →</ServiceCTA>

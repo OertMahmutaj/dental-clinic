@@ -22,25 +22,25 @@ export const services: Service[] = [
     id: 1,
     title: 'Higjiena Dentare',
     description: 'Pastrimi profesional dhe parandalimi i problemeve dentare',
-    icon: '🦷',
+    icon: 'tooth',
   },
   {
     id: 2,
     title: 'Estetika Dentare',
     description: 'Zbardhje dhe restaurime estetike për buzëqeshjen tuaj',
-    icon: '✨',
+    icon: 'sparkles',
   },
   {
     id: 3,
     title: 'Implante Dentare',
     description: 'Zëvendësimi i dhëmbëve të humbur me implante moderne',
-    icon: '🔧',
+    icon: 'screwdriver',
   },
   {
     id: 4,
     title: 'Ortodonci',
     description: 'Korrigjimi i pozicionit të dhëmbëve me aparate',
-    icon: '😁',
+    icon: 'smile',
   },
 ];
 
