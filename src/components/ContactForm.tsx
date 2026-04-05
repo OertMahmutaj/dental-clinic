@@ -65,12 +65,12 @@ export default function ContactForm() {
     <FormContainer onSubmit={handleSubmit(onSubmit)}>
       {submitSuccess && (
         <SuccessMessage>
-          ✓ Mesazhi juaj u dërgua me sukses! Do t&apos;ju kontaktojmë së shpejti.
+          {`✓ Mesazhi juaj u dërgua me sukses! Do t'ju kontaktojmë së shpejti.`}
         </SuccessMessage>
       )}
 
       <FormGroup>
-        <Label htmlFor="name">Emri dhe Mbiemri *</Label>
+        <Label htmlFor="name">{`Emri dhe Mbiemri *`}</Label>
         <Input
           id="name"
           type="text"
@@ -81,7 +81,7 @@ export default function ContactForm() {
       </FormGroup>
 
       <FormGroup>
-        <Label htmlFor="email">Email *</Label>
+        <Label htmlFor="email">{`Email *`}</Label>
         <Input
           id="email"
           type="email"
@@ -92,7 +92,7 @@ export default function ContactForm() {
       </FormGroup>
 
       <FormGroup>
-        <Label htmlFor="phone">Telefon *</Label>
+        <Label htmlFor="phone">{`Telefon *`}</Label>
         <Input
           id="phone"
           type="tel"
@@ -104,7 +104,7 @@ export default function ContactForm() {
       </FormGroup>
 
       <FormGroup>
-        <Label htmlFor="message">Mesazhi *</Label>
+        <Label htmlFor="message">{`Mesazhi *`}</Label>
         <Textarea
           id="message"
           className={errors.message ? 'error' : ''}

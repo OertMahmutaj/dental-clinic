@@ -28,9 +28,9 @@ export default function Testimonials() {
             <Container>
                 <HeadingWrapper>
                     <Title>
-                        Çfarë Thonë <span>Pacientët</span>
+                        {`Çfarë Thonë`} <span>{`Pacientët`}</span>
                     </Title>
-                    <Subtitle>Kënaqësia juaj është prioriteti ynë kryesor</Subtitle>
+                    <Subtitle>{`Kënaqësia juaj është prioriteti ynë kryesor`}</Subtitle>
                     <Divider />
                 </HeadingWrapper>
 
@@ -64,13 +64,13 @@ export default function Testimonials() {
                 </NavigationDots>
 
                 <GoogleCTA>
-                    <p>Lexo më shumë recensione në</p>
+                    <p>{`Lexo më shumë recensione në`}</p>
                     <GoogleButton
                         href="https://www.google.com/maps/place/Klinika+Dentare+Adi+Dent/@41.3258319,19.8243573,17z/data=!3m1!5s0x1350311784aadfdb:0xe562087b50209c8c!4m8!3m7!1s0x1350312f872bd857:0xb91f0d3f7413a3f3!8m2!3d41.3258279!4d19.8269322!9m1!1b1!16s%2Fg%2F11h4ycx_cx?entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        📝 Google Reviews
+                        {`📝 Google Reviews`}
                     </GoogleButton>
                 </GoogleCTA>
             </Container>

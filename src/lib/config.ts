@@ -13,7 +13,7 @@ export const clinicInfo: ClinicInfo = {
   hours: {
     weekdays: '8:30 AM - 8:00 PM',
     saturday: '8:30 AM - 2:00 PM',
-    sunday: 'Closed',
+    sunday: 'Mbyllur',
   },
 };
 
