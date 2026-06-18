@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import '@/lib/config.fontawesome';
 import StyledComponentsRegistry from '@/lib/registry';
-import ThemeWrapper, { Header } from '@/components/ThemeWrapper';
-import { GeistSans } from 'geist/font/sans';
+import ThemeWrapper from '@/components/ThemeWrapper';
+import { Header } from '@/components/sections/Header';
+import { GeistMono } from 'geist/font/mono'; // 🌟 Swapped to the elite monospace family
 import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
@@ -17,8 +18,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="sq">
-      <body className={GeistSans.variable}>
+    <html 
+      lang="sq" 
+      className="scroll-smooth"
+      suppressHydrationWarning={true} /* 🌟 Prevents theme layout blinking/mismatch logs */
+    >
+      <body className={GeistMono.variable}>
         <StyledComponentsRegistry>
           <ThemeWrapper>
             <Header />

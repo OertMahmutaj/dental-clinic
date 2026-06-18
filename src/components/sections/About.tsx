@@ -4,7 +4,6 @@ import React from 'react';
 import {
   AboutSection,
   Container,
-  TextCenter,
   GridTwoColumns,
   InfoCard,
   StatsGrid,
@@ -17,54 +16,59 @@ export default function About() {
   return (
     <AboutSection id="about">
       <Container>
-        <TextCenter>
-          <h2>
-            {`Rreth`} <span>{`Adi Dent`}</span>
-          </h2>
-          <div className="divider" />
-        </TextCenter>
+        {/* Simplified Header: Removed technical tags */}
+        <div className="section-header">
+          <h2>Rreth Nesh</h2>
+          <p className="subtitle">
+            Klinika dentare Adi Dent ofron një eksperiencë të personalizuar, 
+            për t&apos;ju pasuruar me buzëqeshje të shëndetshme dhe estetikë të plotë.
+          </p>
+        </div>
 
         <GridTwoColumns>
-          <div>
+          {/* Left Column: Narrative */}
+          <div className="narrative-stack">
             <p>
-              {`Klinika Dentare Adi Dent është një nga klinikat më të besueshme
+              Klinika Dentare Adi Dent është një nga klinikat më të besueshme
               në Tiranë, e pajisur me teknologjinë më të fundit dentare dhe
-              një ekip profesionistësh të dedikuar për shëndetin tuaj oral.`}
+              një ekip profesionistësh të dedikuar për shëndetin tuaj oral.
             </p>
             <p>
-              {`Ne ofrojmë një gamë të gjerë shërbimesh, nga higjiena dentare
-              deri tek implante dhe estetika dentare, duke garantuar rezultate
-              cilësore dhe kujdes të personalizuar për çdo pacient.`}
+              Ne ofrojmë një gamë të gjerë shërbimesh, duke garantuar
+              rezultate strukturore dhe kujdes të rreptë për çdo pacient.
             </p>
 
             <InfoCard>
-              <span><FontAwesomeIcon icon={faHandHoldingHeart} /></span>
-              <div>
-                <h3>{`Misioni Ynë`}</h3>
+              <div className="icon-wrapper">
+                <FontAwesomeIcon icon={faHandHoldingHeart} />
+              </div>
+              <div className="info-content">
+                <h3>Misioni Ynë</h3>
                 <p>
-                  {`Të krijojmë buzëqeshje të shëndetshme dhe të lumtura
-                  përmes kujdesit profesional dhe trajtimit me respekt.`}
+                  Të ndërtojmë buzëqeshje të shëndetshme përmes protokolleve 
+                  profesionale dhe trajtimit rigoroz.
                 </p>
               </div>
             </InfoCard>
           </div>
 
+          {/* Right Column: Statistics Grid */}
           <StatsGrid>
-            <StatCard $colorFrom="#3b82f6" $colorTo="#2563eb">
-              <div>{`10+`}</div>
-              <div>{`Vite Eksperiencë`}</div>
+            <StatCard>
+              <div className="stat-value">10+</div>
+              <div className="stat-label">Vite Eksperiencë</div>
             </StatCard>
-            <StatCard $colorFrom="#14b8a6" $colorTo="#0f766e">
-              <div>{`5000+`}</div>
-              <div>{`Pacientë të Kënaqur`}</div>
+            <StatCard>
+              <div className="stat-value">5000+</div>
+              <div className="stat-label">Pacientë të Kënaqur</div>
             </StatCard>
-            <StatCard $colorFrom="#8b5cf6" $colorTo="#7c3aed">
-              <div>{`100%`}</div>
-              <div>{`Profesionalizëm`}</div>
+            <StatCard>
+              <div className="stat-value">100%</div>
+              <div className="stat-label">Profesionalizëm</div>
             </StatCard>
-            <StatCard $colorFrom="#f97316" $colorTo="#ea580c">
-              <div>{`24/7`}</div>
-              <div>{`Mbështetje`}</div>
+            <StatCard>
+              <div className="stat-value">24/7</div>
+              <div className="stat-label">Mbështetje</div>
             </StatCard>
           </StatsGrid>
         </GridTwoColumns>

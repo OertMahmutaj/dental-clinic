@@ -1,192 +1,76 @@
 import styled from 'styled-components';
 
 export const HeroSection = styled.section`
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background: linear-gradient(135deg, #667eea 0%, #3432c9 100%);
-
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: 
-      radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, rgba(255, 100, 130, 0.2) 0%, transparent 50%);
-    animation: pulse 8s ease-in-out infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.8; }
+  padding: 120px 0 80px;
+  background-color: var(--bg-primary);
+  @media (max-width: 768px) {
+    background-image: none; /* Hide the grid background on mobile */
+    /* OR if it is a border, hide it: */
+    border-right: none; 
   }
 `;
 
-export const Container = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-  z-index: 10;
-  margin: 0 auto;
-  padding: ${({ theme }) => `${theme.spacing.lg} 0`};
-  text-align: center;
+export const Title = styled.h1`
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  span { color: var(--accent-blue); }
+`;
+
+export const Subtitle = styled.p`
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-bottom: 40px;
 `;
 
 export const Badge = styled.div`
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 0.75rem 1.5rem;
-  border-radius: 0px;
-  color: white;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--bg-gray);
+  border-radius: 50px;
   font-size: 0.9rem;
-  font-weight: 500;
-  margin-bottom: 2rem;
-  animation: slideDown 0.8s ease-out;
-
-  @keyframes slideDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-`;
-
-export const Title = styled.h1`
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  color: white;
-  margin-bottom: 1.5rem;
-  animation: fadeInUp 1s ease-out 0.2s both;
-
-  span {
-    display: block;
-    background: rgba(255, 255, 255, 0.9);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-`;
-
-export const Subtitle = styled.p`
-  font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.9);
-  max-width: 600px;
-  margin: 0 auto 3rem;
-  line-height: 1.8;
-  animation: fadeInUp 1s ease-out 0.4s both;
+  font-weight: 600;
+  color: var(--accent-blue);
+  margin-bottom: 24px;
 `;
 
 export const ButtonGroup = styled.div`
   display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  animation: fadeInUp 1s ease-out 0.6s both;
+  gap: 16px;
+  margin-bottom: 60px;
 `;
 
-export const Button = styled.button<{ $variant?: 'primary' | 'whatsapp' }>`
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem 0.5rem 0.4rem;
+export const Button = styled.button`
+  padding: 14px 28px;
+  border-radius: 8px;
   font-weight: 600;
-  font-size: 0.95rem;
-  color: #e4e6eb;
-  border-radius: 0px;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  background: var(--accent-blue);
+  color: white;
+  border: none;
   cursor: pointer;
-
-  ${({ $variant }) =>
-    $variant === 'whatsapp'
-      ? `
-    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-    color: white;
-    &:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); }
-  `
-      : `
-    background: white;
-    color: #667eea;
-    &:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3); }
-  `}
-
-  &:active { transform: translateY(-1px); }
+  
+  &.whatsapp { background: #25d366; }
+  &:hover { opacity: 0.9; }
 `;
 
 export const InfoGrid = styled.div`
   display: grid;
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 96rem;
-  margin: 0 auto;
-
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  animation: fadeInUp 1s ease-out 0.8s both;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border-color);
 `;
 
 export const InfoCard = styled.div`
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 2rem;
-  border-radius: 0px;
-  transition: all 0.3s ease;
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.25);
-    transform: translateY(-5px);
-  }
-
-  .icon { font-size: 2.5rem; margin-bottom: 1rem; }
-  .label { font-size: 0.85rem; color: rgba(255, 255, 255, 0.7); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
-  .title { font-size: 1.1rem; font-weight: 600; color: white; margin-bottom: 0.25rem; }
-  .detail { color: rgba(255, 255, 255, 0.9); font-size: 0.95rem; }
+  .card-title { font-weight: 700; margin-bottom: 4px; }
+  .card-detail { color: var(--text-secondary); }
 `;
 
-// export const ScrollIndicator = styled.div`
-//   position: absolute;
-//   bottom: 0rem;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   animation: bounce 2s infinite;
-
-//   @keyframes bounce {
-//     0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-//     40% { transform: translateX(-50%) translateY(-10px); }
-//     60% { transform: translateX(-50%) translateY(-5px); }
-//   }
-
-//   .mouse {
-//     width: 24px;
-//     height: 40px;
-//     border: 2px solid rgba(255, 255, 255, 0.5);
-//     border-radius: 15px;
-//     display: flex;
-//     align-items: flex-start;
-//     justify-content: center;
-//     padding: 8px;
-
-//     .wheel {
-//       width: 3px;
-//       height: 8px;
-//       background: rgba(255, 255, 255, 0.7);
-//       border-radius: 2px;
-//     }
-//   }
-// `;
+export const Container = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+`;

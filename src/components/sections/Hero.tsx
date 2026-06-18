@@ -1,9 +1,9 @@
 'use client';
 
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faPhone, faTooth } from '@fortawesome/free-solid-svg-icons';
-
 import { clinicInfo } from '@/lib/config';
 import {
   HeroSection,
@@ -13,75 +13,55 @@ import {
   Subtitle,
   ButtonGroup,
   Button,
+  InfoGrid,
+  InfoCard,
 } from '@/styles/Hero.styles';
 
 export default function Hero() {
-  const handleCall = () => {
-    window.location.href = `tel:${clinicInfo.phone}`;
-  };
-
-  const handleWhatsApp = () => {
-    window.open(`https://wa.me/${clinicInfo.whatsapp}`, '_blank');
-  };
+  const handleCall = () => window.location.href = `tel:${clinicInfo.phone}`;
+  const handleWhatsApp = () => window.open(`https://wa.me/${clinicInfo.whatsapp}`, '_blank');
 
   return (
     <HeroSection>
       <Container>
         <Badge>
-          <span><FontAwesomeIcon icon={faTooth} /></span>
-          <span>{`Klinika Juaj Dentare në Tiranë`}</span>
+          <FontAwesomeIcon icon={faTooth} /> Adi Dent – Kujdes Dentar Profesional
         </Badge>
 
         <Title>
-          {`Buzëqeshja juaj`}<br />
-          <span>{`perfekte fillon këtu`}</span>
+          Buzëqeshja juaj e përsosur <br />
+          <span>fillon këtu.</span>
         </Title>
 
         <Subtitle>
-          {`Shërbime dentare profesionale me teknologji moderne dhe ekip të
-          ekspertizuar në zemër të Tiranës.`}
+          Shërbime dentare me teknologji moderne në zemër të Tiranës. 
+          Ekspertizë, kujdes dhe sterilizim për shëndetin tuaj oral.
         </Subtitle>
 
         <ButtonGroup>
           <Button onClick={handleCall}>
-            <FontAwesomeIcon icon={faPhone} />
-            {`Rezervo Takimin`}
+            <FontAwesomeIcon icon={faPhone} /> Rezervo Takimin
           </Button>
-          <Button $variant="whatsapp" onClick={handleWhatsApp}>
-            <FontAwesomeIcon icon={faWhatsapp} />
-            {`WhatsApp`}
+          <Button className="whatsapp" onClick={handleWhatsApp}>
+            <FontAwesomeIcon icon={faWhatsapp} /> WhatsApp
           </Button>
         </ButtonGroup>
 
-        {/* <InfoGrid>
+        <InfoGrid>
           <InfoCard>
-            <div className="icon">⏰</div>
-            <div className="label">Orari</div>
-            <div className="title">E Hënë - E Premte</div>
-            <div className="detail">{clinicInfo.hours.weekdays}</div>
+            <div className="card-title">Orari</div>
+            <div className="card-detail">{clinicInfo.hours.weekdays}</div>
           </InfoCard>
-
           <InfoCard>
-            <div className="icon">📍</div>
-            <div className="label">Adresa</div>
-            <div className="title">Shkolla e Baletit</div>
-            <div className="detail">Tiranë, Albania</div>
+            <div className="card-title">Adresa</div>
+            <div className="card-detail">Shkolla e Baletit, Tiranë</div>
           </InfoCard>
-
           <InfoCard>
-            <div className="icon">🏆</div>
-            <div className="label">Eksperiencë</div>
-            <div className="title">Ekip Profesional</div>
-            <div className="detail">Teknologji Moderne</div>
+            <div className="card-title">Teknologji</div>
+            <div className="card-detail">Pajisje bashkëkohore</div>
           </InfoCard>
-        </InfoGrid> */}
+        </InfoGrid>
       </Container>
-
-      {/* <ScrollIndicator>
-        <div className="mouse">
-          <div className="wheel" />
-        </div>
-      </ScrollIndicator> */}
     </HeroSection>
   );
 }

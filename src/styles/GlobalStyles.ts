@@ -1,87 +1,101 @@
-'use client';
+"use client";
 
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-  /* Reset & base */
+
+  /* 1. Reset */
   *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border-radius: 0;
   }
 
-  html {
-    scroll-behavior: smooth;
-    font-size: 16px; /* base size for rems */
+  /* 2. Clinical Color Palette (Based on Reference) */
+  :root {
+    --bg-primary: #ffffff;
+    --bg-gray: #f3f4f6;          /* The light section backgrounds */
+    --bg-dark-blue: #001e62;     /* The heavy footer/contact area color */
+    
+    --text-primary: #111827;     /* Professional deep gray/black */
+    --text-secondary: #4b5563;   /* Readable gray */
+    
+    --accent-blue: #2563eb;      /* The primary action blue */
+    --border-color: #e5e7eb;     /* Subtle borders for cards */
+    
+    --radius-md: 12px;           /* Soft rounded edges for comfort */
   }
+    
+  html, body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
 
+  /* 3. Typography - Clean, readable Sans-Serif */
   body {
-    font-family: ${({ theme }) => theme.fonts.main};
-    color: ${({ theme }) => theme.colors.dark};
-    background-color: ${({ theme }) => theme.colors.background || '#fff'};
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
     line-height: 1.6;
-    letter-spacing: 0.5px;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: ${({ theme }) => theme.fonts.heading};
+  h1, h2, h3, h4 {
     font-weight: 700;
-    line-height: 1.3;
-    color: ${({ theme }) => theme.colors.dark};
-  }
-
-  p {
+    color: var(--text-primary);
     margin-bottom: 1rem;
+    line-height: 1.2;
   }
 
-  button {
-    font-family: inherit;
+  /* 4. Layout Helpers (The "Card" System) */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 32px;
+  }
+
+  /* 5. Interactive Elements */
+  button, a {
     cursor: pointer;
-    border: none;
-    background: none;
-    transition: all 0.2s ease-in-out;
-    font-size: inherit; 
-    line-height: inherit; 
-
-    &:hover {
-      opacity: 0.85;
-    }
+    transition: all 0.2s ease;
   }
 
-  a {
+  .btn-primary {
+    background-color: var(--accent-blue);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
     text-decoration: none;
-    color: ${({ theme }) => theme.colors.primary || '#2563eb'};
-    transition: color 0.2s ease-in-out;
-    cursor: pointer;
-    font-size: inherit; 
-    line-height: inherit; 
-
-    &:hover {
-      color: ${({ theme }) => theme.colors.accent || '#3b82f6'};
-    }
+    display: inline-block;
   }
 
-  input, textarea, select {
+  .btn-primary:hover {
+    filter: brightness(1.1);
+  }
+
+  /* 6. Form Styling */
+  input, textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 16px;
     font-family: inherit;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 0.5rem;
-    outline: none;
-    transition: border-color 0.2s ease;
-
-    &:focus {
-      border-color: ${({ theme }) => theme.colors.primary || '#2563eb'};
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
-    }
   }
 
-  ::selection {
-    background-color: ${({ theme }) => theme.colors.primary || '#2563eb'};
-    color: #fff;
+  input:focus {
+    outline: 2px solid var(--accent-blue);
+    border-color: transparent;
   }
 `;
 

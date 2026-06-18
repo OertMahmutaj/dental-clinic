@@ -1,85 +1,46 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ContactSection = styled.section`
-  padding: 6rem 1.5rem;
-  background: #f9fafb;
+  padding: 80px 0;
+  background-color: var(--bg-dark-blue); /* Professional deep blue background */
+  color: white;
+
+  .section-header h2 { color: white; }
+  .subtitle { opacity: 0.8; margin-bottom: 40px; }
 `;
 
 export const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
-`;
-
-export const Title = styled.h2`
-  font-size: 2.75rem;
-  font-weight: 700;
-  text-align: center;
-  color: #111827;
-  margin-bottom: 1rem;
-`;
-
-export const Subtitle = styled.p`
-  font-size: 1.125rem;
-  text-align: center;
-  color: #6b7280;
-  margin-bottom: 3rem;
+  padding: 0 24px;
 `;
 
 export const ContentGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: start;
+  grid-template-columns: 1fr 400px;
+  gap: 40px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     grid-template-columns: 1fr;
-    gap: 2rem;
   }
 `;
 
 export const InfoBox = styled.div`
-  background: #ffffff;
-  padding: 2rem;
-  border-radius: 0px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 32px;
+  border-radius: 12px;
 
-  h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: #111827;
-  }
+  h3 { margin-bottom: 24px; color: white; }
 `;
 
 export const InfoItem = styled.div`
   display: flex;
-  gap: 1rem;
   align-items: flex-start;
-  margin-bottom: 1.5rem;
+  gap: 16px;
+  margin-bottom: 20px;
 
-  .icon {
-    font-size: 1.75rem;
-  }
-
-  .content {
-    display: flex;
-    flex-direction: column;
-
-    strong {
-      font-weight: 600;
-      color: #111827;
-      margin-bottom: 0.25rem;
-    }
-
-    a,
-    span {
-      font-size: 0.95rem;
-      color: #6b7280;
-      text-decoration: none;
-
-      &:hover {
-        color: #2563eb;
-      }
-    }
-  }
+  .icon { color: var(--accent-blue); font-size: 1.2rem; }
+  .content { display: flex; flex-direction: column; }
+  strong { font-size: 0.9rem; opacity: 0.7; }
+  a { color: white; text-decoration: underline; }
 `;

@@ -8,6 +8,40 @@ html {
   scroll-behavior: smooth;
 }
 
+/* 1. Core Visual Infrastructure (Default Light / Minimal Paper Theme) */
+:root {
+  --bg-primary: #fbfbfb;        /* Crisp medical paper white */
+  --text-primary: #0a0a0a;      /* Deep obsidian black */
+  --text-secondary: #52525b;    /* Muted structural zinc */
+  --border-line: #0a0a0a;       /* Hard, high-contrast brutalist borders */
+  --hover-tint: #f4f4f5;
+  
+  --accent-clinical: #0043ce;   /* Razor-sharp high-end clinical blue */
+}
+
+/* 2. Dark Mode Overrides (Triggers via System Media Query) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #0a0a0a;      /* Deep midnight black */
+    --text-primary: #ffffff;    /* Stark sterile white */
+    --text-secondary: #a1a1aa;  /* Muted silver zinc */
+    --border-line: #ffffff;     /* Stark white structural framing borders */
+    --hover-tint: #18181b;
+  }
+}
+
+/* 3. The Typography & Reset Transformation */
 body {
-  font-family: var(--font-geist-sans), sans-serif;
+  font-family: var(--font-geist-mono), ui-monospace, monospace !important;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  background-image: linear-gradient(var(--hover-tint) 1px, transparent 1px),
+                    linear-gradient(90deg, var(--hover-tint) 1px, transparent 1px);
+  background-size: 64px 64px;   /* Subtle blueprint grid layout backing */
+  
+  /* Proper native browser font smoothing specifications */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }

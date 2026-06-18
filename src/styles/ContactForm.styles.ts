@@ -1,102 +1,94 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 export const FormContainer = styled.form`
   width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 2rem;
-  background-color: ${({ theme }) => theme.colors.offWhite};
-  border-radius: 0px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  /* No fixed max-width here so it fills the "form-frame" grid area */
+  padding: 0;
+  background-color: transparent;
+  border: none;
 `;
 
 export const FormGroup = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.5rem;
+  margin-bottom: 20px;
 `;
 
 export const Label = styled.label`
-  margin-bottom: 0.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.9rem;
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.darkGray};
+  color: white; /* White text because this form sits on a deep blue background */
+  margin-bottom: 8px;
 `;
 
 export const Input = styled.input<{ className?: string }>`
-  padding: 0.75rem 1rem;
-  border-radius: 0px;
-  border: 1px solid ${({ theme }) => theme.colors.gray};
+  width: 100%;
+  padding: 12px 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
   font-size: 1rem;
-  transition: border 0.2s, box-shadow 0.2s;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.2s ease;
 
   &:focus {
-    outline: none;
-    border-color: ${({ theme }) => theme.colors.primary};
-    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
-  }
-
-  &.error {
-    border-color: ${({ theme }) => theme.colors.danger};
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: var(--accent-blue) !important;
   }
 `;
 
 export const Textarea = styled.textarea<{ className?: string }>`
-  padding: 0.75rem 1rem;
-  border-radius: 0px;
-  border: 1px solid ${({ theme }) => theme.colors.gray};
+  width: 100%;
+  padding: 12px 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
   font-size: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 8px;
+  outline: none;
   resize: vertical;
   min-height: 120px;
-  transition: border 0.2s, box-shadow 0.2s;
+  transition: all 0.2s ease;
 
   &:focus {
-    outline: none;
-    border-color: ${({ theme }) => theme.colors.primary};
-    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: var(--accent-blue) !important;
+  }
+`;
+
+export const SubmitButton = styled.button`
+  width: 100%;
+  padding: 14px 24px;
+  background-color: var(--accent-blue);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    filter: brightness(1.1);
   }
 
-  &.error {
-    border-color: ${({ theme }) => theme.colors.danger};
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 `;
 
 export const ErrorMessage = styled.span`
-  margin-top: 0.5rem;
-  font-size: 0.875rem;
-  color: ${({ theme }) => theme.colors.danger};
-`;
-
-const fadeIn = keyframes`
-  from { opacity: 0; transform: translateY(-5px); }
-  to { opacity: 1; transform: translateY(0); }
+  color: #fbbf24; /* Soft yellow for error readability on dark blue */
+  font-size: 0.8rem;
+  margin-top: 4px;
 `;
 
 export const SuccessMessage = styled.div`
-  background-color: ${({ theme }) => theme.colors.success};
-  color: ${({ theme }) => theme.colors.white};
-  padding: 1rem;
-  border-radius: 0px;
+  background-color: #059669; /* Success green */
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
   text-align: center;
-  margin-bottom: 1.5rem;
-  animation: ${fadeIn} 0.3s ease-out;
-`;
-
-export const SubmitButton = styled.button`
-  padding: 0.75rem 1.5rem;
-  border-radius: 0px;
-  background-color: ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.white};
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s;
-
-  &:hover:not(:disabled) {
-    background-color: ${({ theme }) => theme.colors.primaryDark};
-  }
-
-  &:disabled {
-    background-color: ${({ theme }) => theme.colors.gray};
-    cursor: not-allowed;
-  }
+  margin-bottom: 20px;
 `;

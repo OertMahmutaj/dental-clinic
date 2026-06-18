@@ -1,21 +1,15 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useGoogleMaps } from '@/lib/googleMapsLoader';
-
-const mapContainerStyle = {
-  width: '100%',
-  height: '400px'
-};
 
 const center = {
   lat: 41.3258039,
   lng: 19.8269137
 };
 
-export default function Map() {
+export default function GoogleMap() {
   const mapRef = useRef<HTMLDivElement>(null);
-  const markerRef = useRef<google.maps.marker.AdvancedMarkerElement | null>(null);
   const { isLoaded } = useGoogleMaps();
 
   useEffect(() => {
@@ -27,11 +21,13 @@ export default function Map() {
 
       const map = new Map(mapRef.current!, {
         center: center,
-        zoom: 15,
-        mapId: 'YOUR_MAP_ID',
+        zoom: 16,
+        mapId: '65d9f4f99d6a668ec378d708', // Using your specific Map ID
+        disableDefaultUI: false,
+        zoomControl: true,
       });
 
-      markerRef.current = new AdvancedMarkerElement({
+      new AdvancedMarkerElement({
         map: map,
         position: center,
         title: 'Klinika Dentare Adi Dent',
@@ -41,7 +37,13 @@ export default function Map() {
     initMap();
   }, [isLoaded]);
 
-  if (!isLoaded) return <div>Loading map...</div>;
+  if (!isLoaded) {
+    return (
+      <div style={{ width: '100%', height: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f3f4f6' }}>
+        <p style={{ fontWeight: 600 }}>Duke ngarkuar hartën...</p>
+      </div>
+    );
+  }
 
-  return <div ref={mapRef} style={mapContainerStyle} />;
+  return <div ref={mapRef} style={{ width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden' }} />;
 }

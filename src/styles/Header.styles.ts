@@ -1,65 +1,51 @@
 import styled from 'styled-components';
 
-export const TopCompanyName = styled.div`
-  display: flex;
-`
-
-export const TopButtonsBar = styled.div`
-  display: flex;
-  justify-content: right;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 2rem 0 2rem;
-  background: #ffffff;
-  border-bottom: 1px solid #BCBCBC;
-  position: sticky;
+export const TopButtonsBar = styled.nav`
+  position: fixed;
   top: 0;
-  z-index: 50;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
 `;
 
 export const TopButton = styled.a`
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem 0.5rem 0.4rem;
-  font-weight: 600;
-  font-size: 0.95rem;
-  color: #e4e6eb;
-  background: #516EFF;
-  border-radius: 0px;
-  border: 1px solid #ebeff5;
+  padding: 14px 20px;
+  color: #374151;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
   text-decoration: none;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  border-left: 1px solid #e5e7eb;
+
   &:hover {
-    background: #3b82f6;
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+    background-color: #f9fafb;
+    color: var(--accent-blue);
   }
 `;
 
 export const ScrollToContactButton = styled.button`
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem 0.5rem 0.4rem;
+  padding: 14px 24px;
+  background-color: var(--accent-blue);
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.9rem;
   font-weight: 600;
-  font-size: 0.95rem;
-  color: #e4e6eb;
-  background: #516EFF;
-  border-radius: 0px;
-  border: 1px solid #d1d5db;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
   cursor: pointer;
-  
+  transition: all 0.2s ease;
+
   &:hover {
-    background: #094181;
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+    filter: brightness(1.1);
   }
 `;

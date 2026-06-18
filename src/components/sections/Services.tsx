@@ -1,13 +1,10 @@
 'use client';
 
+import React from 'react';
 import { services } from '@/lib/config';
 import {
   ServicesSection,
-  Container,
   TitleWrapper,
-  Title,
-  Subtitle,
-  Divider,
   ServicesGrid,
   ServiceCard,
   ServiceTitle,
@@ -18,6 +15,7 @@ import {
   ExtraDescription,
   ExtraButton
 } from '@/styles/Services.styles';
+import Container from '@/components/layout/Container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTooth, faScrewdriverWrench, faFaceSmileBeam, IconDefinition, faWandMagicSparkles } from '@fortawesome/free-solid-svg-icons';
 import Link from "next/link";
@@ -29,38 +27,40 @@ const iconMap: Record<string, IconDefinition> = {
   smile: faFaceSmileBeam,
 };
 
-
 export default function Services() {
   return (
     <ServicesSection id="services">
       <Container>
         <TitleWrapper>
-          <Title>{`Shërbimet`} <span>{`Tona`}</span></Title>
-          <Subtitle>
-            {`Ofrojmë një gamë të plotë shërbimesh dentare me standarde të larta cilësore`}
-          </Subtitle>
-          <Divider />
+          <h2>Shërbimet Tona</h2>
+          <p className="subtitle-text">
+            Ofrojmë një gamë të plotë shërbimesh dentare me standarde të larta dhe kujdes të personalizuar.
+          </p>
         </TitleWrapper>
 
         <ServicesGrid>
           {services.map((service) => (
             <ServiceCard key={service.id}>
-              <FontAwesomeIcon icon={iconMap[service.icon]} />
+              <div className="clinical-icon">
+                <FontAwesomeIcon icon={iconMap[service.icon] || faTooth} />
+              </div>
+
               <ServiceTitle>{service.title}</ServiceTitle>
               <ServiceDescription>{service.description}</ServiceDescription>
-              <Link href={`/services/${service.slug}`}>
-                <ServiceCTA>{`Mëso më shumë →`}</ServiceCTA>
-              </Link>
+
+              <ServiceCTA href={`/services/${service.slug}`}>
+                Më shumë detaje →
+              </ServiceCTA>
             </ServiceCard>
           ))}
         </ServicesGrid>
 
         <ExtraServices>
-          <ExtraTitle>{`Shërbime të Tjera`}</ExtraTitle>
+          <ExtraTitle>Shërbime të tjera</ExtraTitle>
           <ExtraDescription>
-            {`Endodonci • Kirurgji Orale • Proteza Dentare • Pediatri Dentare • Periodontologji`}
+            Endodonci • Kirurgji Orale • Proteza Dentare • Pediatri Dentare • Periodontologji
           </ExtraDescription>
-          <ExtraButton href="tel:+355695579998">{`Kontaktoni për Detaje`}</ExtraButton>
+          <ExtraButton href="tel:+355695579998">Na kontaktoni për detaje</ExtraButton>
         </ExtraServices>
       </Container>
     </ServicesSection>
