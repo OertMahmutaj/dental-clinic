@@ -43,6 +43,7 @@ export default function ContactForm() {
       setSubmitSuccess(true);
       reset();
       setTimeout(() => setSubmitSuccess(false), 5000);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       alert('Ndodhi një gabim. Ju lutem provoni përsëri.');
     } finally {
