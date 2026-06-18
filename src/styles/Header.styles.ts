@@ -1,15 +1,39 @@
 import styled from 'styled-components';
 
-export const TopButtonsBar = styled.nav`
+export const HeaderContainer = styled.header`
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  z-index: 1000;
   display: flex;
-  justify-content: flex-end;
-  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 24px;
+  background: white;
   border-bottom: 1px solid #e5e7eb;
+  z-index: 1000;
+`;
+
+export const LogoWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--accent-blue);
+`;
+
+export const TopButtonsBar = styled.nav`
+  display: flex;
+  gap: 12px;
+
+  @media (max-width: 600px) {
+    gap: 8px;
+    
+    /* Hide text labels on very small screens to keep the header clean */
+    span {
+      display: none;
+    }
+  }
 `;
 
 export const TopButton = styled.a`

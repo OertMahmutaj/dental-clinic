@@ -18,7 +18,6 @@ import {
 import Container from '@/components/layout/Container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTooth, faScrewdriverWrench, faFaceSmileBeam, IconDefinition, faWandMagicSparkles } from '@fortawesome/free-solid-svg-icons';
-import Link from "next/link";
 
 const iconMap: Record<string, IconDefinition> = {
   tooth: faTooth,

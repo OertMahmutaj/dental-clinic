@@ -3,7 +3,7 @@ import '@/lib/config.fontawesome';
 import StyledComponentsRegistry from '@/lib/registry';
 import ThemeWrapper from '@/components/ThemeWrapper';
 import { Header } from '@/components/sections/Header';
-import { GeistMono } from 'geist/font/mono'; // 🌟 Swapped to the elite monospace family
+import { GeistMono } from 'geist/font/mono';
 import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export default function RootLayout({
     <html 
       lang="sq" 
       className="scroll-smooth"
-      suppressHydrationWarning={true} /* 🌟 Prevents theme layout blinking/mismatch logs */
+      suppressHydrationWarning={true} 
     >
       <body className={GeistMono.variable}>
         <StyledComponentsRegistry>
