@@ -9,7 +9,6 @@ import {
   ServiceCard,
   ServiceTitle,
   ServiceDescription,
-  ServiceCTA,
   ExtraServices,
   ExtraTitle,
   ExtraDescription,
@@ -47,9 +46,9 @@ export default function Services() {
               <ServiceTitle>{service.title}</ServiceTitle>
               <ServiceDescription>{service.description}</ServiceDescription>
 
-              <ServiceCTA href={`/services/${service.slug}`}>
+              {/* <ServiceCTA href={`/services/${service.slug}`}>
                 Më shumë detaje →
-              </ServiceCTA>
+              </ServiceCTA> */}
             </ServiceCard>
           ))}
         </ServicesGrid>
